@@ -98,7 +98,7 @@ net safe-z halui.mdi-command-06 <= xhc-hb04.button-safe-z
 #####################################################################################
 # 				Tool-probe
 #####################################################################################
-#net tool-probe halui.mdi-command-07 <= xhc-hb04.button-probe-z
+net tool-probe halui.mdi-command-07 <= xhc-hb04.button-probe-z
 
 
 
