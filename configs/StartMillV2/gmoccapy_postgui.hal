@@ -6,8 +6,9 @@
 #net spindle-at-speed motion.spindle-at-speed => gmoccapy.spindle_at_speed_led
 
 
-
-# Feedrate and Spindle Handwheel Config
+################################################################
+#            Feedrate and Spindle Handwheel Config
+################################################################
 
 net jog-counts <= xhc-hb04.jog.counts
 
@@ -22,3 +23,11 @@ net jog-spindle-override gmoccapy.spindle.spindle-override.count-enable <= xhc-h
 
 net spindle-rps-out halui.spindle-override.value => xhc-hb04.spindle-override
 net jog-spindle-out motion.spindle-speed-out-rps-abs =>  xhc-hb04.spindle-rps
+
+################################################################
+#                    Spindel Feedback RS485
+################################################################
+
+net hy_vfd_rpm spindle-vfd.Rott => spindleLoad.rpm
+net hy_vfd_current spindle-vfd.OutA => spindleLoad.current
+
