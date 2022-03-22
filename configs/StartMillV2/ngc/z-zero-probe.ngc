@@ -4,6 +4,6 @@ o<z-zero-probe> sub
 	G10 L20 P0 Z0
 	G1 F300 Z5
 	G38.2 F200 Z-6
-	G10 L20 P0 Z32.638
+	G10 L20 P0 Z32.4
 	G53 G0 Z0
 o<z-zero-probe> endsub

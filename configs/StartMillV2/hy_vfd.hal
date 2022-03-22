@@ -10,4 +10,4 @@ setp spindle-vfd.enable 1
 net spindle-speed-cmd  motion.spindle-speed-out-abs => spindle-vfd.speed-command
 #net spindle-on         motion.spindle-on => spindle-vfd.spindle-on
 
-net spindle-at-speed   motion.spindle-at-speed <= spindle-vfd.spindle-at-speed
+#net spindle-at-speed   motion.spindle-at-speed <= spindle-vfd.spindle-at-speed

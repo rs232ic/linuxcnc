@@ -28,6 +28,6 @@ net jog-spindle-out motion.spindle-speed-out-rps-abs =>  xhc-hb04.spindle-rps
 #                    Spindel Feedback RS485
 ################################################################
 
-net hy_vfd_rpm spindle-vfd.Rott => gmoccapy.spindle_feedback_bar
+net hy_vfd_rpm spindle-vfd.Rott => gmoccapy.spindle_feedback_bar motion.spindle-speed-in
 
 
