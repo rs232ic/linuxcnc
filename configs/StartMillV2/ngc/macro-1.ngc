@@ -1,0 +1,4 @@
+o<macro-1> sub
+	G53 G0 Z0	
+	G53 G0 X990 Y1060
+o<macro-1> endsub
