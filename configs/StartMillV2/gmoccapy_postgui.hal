@@ -12,14 +12,20 @@ net spindle-at-speed motion.spindle-at-speed => gmoccapy.spindle_at_speed_led
 
 net jog-counts <= xhc-hb04.jog.counts
 
-net jog-counts => gmoccapy.feed.feed-override.counts
-net jog-feed gmoccapy.feed.feed-override.count-enable <= xhc-hb04.jog.enable-feed-override
+net jog-feed halui.feed-override.count-enable <= xhc-hb04.jog.enable-feed-override
+net jog-feed halui.rapid-override.count-enable <= xhc-hb04.jog.enable-feed-override
+
+net jog-counts => halui.feed-override.counts
+net jog-counts => halui.rapid-override.counts
+
 net jog-feed-override-out motion.current-vel => xhc-hb04.feed-value
 net jog-feed-out halui.feed-override.value => xhc-hb04.feed-override
 
+setp halui.feed-override.scale  0.01
+setp halui.rapid-override.scale 0.01
+
 net jog-counts  => gmoccapy.spindle.spindle-override.counts
 net jog-spindle-override gmoccapy.spindle.spindle-override.count-enable <= xhc-hb04.jog.enable-spindle-override
-
 
 net spindle-rps-out halui.spindle-override.value => xhc-hb04.spindle-override
 net jog-spindle-out motion.spindle-speed-out-rps-abs =>  xhc-hb04.spindle-rps
