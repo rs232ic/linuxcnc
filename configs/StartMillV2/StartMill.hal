@@ -17,9 +17,9 @@ addf and2.0 servo-thread
 addf and2.1	servo-thread
 addf and2.2	servo-thread
 
-loadrt not count=1
+loadrt not count=2
 addf not.0 servo-thread
-
+addf not.1 servo-thread
 
 #####################################################################################
 # 				X AXIS
@@ -143,8 +143,8 @@ setp hm2_5i25.0.gpio.001.is_output true
 # 				TOOL PROBE
 #####################################################################################
 
-net probe-in <= hm2_5i25.0.gpio.003.in
-net probe-in => motion.probe-input
+net probe-in hm2_5i25.0.gpio.003.in => not.1.in
+net probe-in-not not.1.out => motion.probe-input
 
 
 #####################################################################################
